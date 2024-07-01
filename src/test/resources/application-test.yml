@@ -1,0 +1,18 @@
+server:
+  port: 8081
+
+spring:
+  profiles:
+    active: test
+
+  data-sources:
+    - name: comparus_test
+      url: jdbc:postgresql://localhost:5432/comparus_test
+      user: qa_user
+      password: qa_user
+      driverClassName: org.postgresql.Driver
+    - name: comparus_test_1
+      url: jdbc:postgresql://localhost:5432/comparus_test_1
+      user: qa_user
+      password: qa_user
+      driverClassName: org.postgresql.Driver
