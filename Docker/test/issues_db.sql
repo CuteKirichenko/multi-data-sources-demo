@@ -1,2 +1,4 @@
-GRANT ALL PRIVILEGES ON ALL TABLES IN SCHEMA public TO testuser;
-GRANT ALL PRIVILEGES ON ALL TABLES IN SCHEMA public TO qa_user;
+--For API
+ALTER SCHEMA public OWNER TO testuser;
+--For tests
+ALTER SCHEMA public OWNER TO qa_user;

@@ -2,9 +2,6 @@ server:
   port: 8081
 
 spring:
-  profiles:
-    active: test
-
   data-sources:
     - name: comparus_test
       url: jdbc:postgresql://localhost:5432/comparus_test

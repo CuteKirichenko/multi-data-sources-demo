@@ -21,13 +21,11 @@ Use any tool to view DB data (psql commands, pgAdmin).
    - `cd ${DOCKER_COMPOSE_YML_LOCATION}`
    - `docker-compose up -d`
 2. pgAdmin will be available on http://127.0.0.1:8888
-3. Enter the root project folder
-4. Execute `mvn clean install -DskipTests`
-5. Execute `mvn spring-boot:run "-Dspring-boot.run.profiles=local"` to start the app
-6. Once app is running you can use http://locallhost:8081/demo/api/users to check the API
+![](../../Desktop/Screenshot 2024-07-02 at 01.25.04.png)
 
-## Possible issues:
-1. You could face permissions issue on postgres. Two solving options:
-- use the issues_db.sql to fix it
-- use pgAdmin GUI to fix it
-
+3. Change schemas owners to testuser and qa_users with GUI or script issues_db.sql
+4. Enter the root project folder
+5. Execute `mvn clean install -DskipTests`
+6. Execute `mvn spring-boot:run "-Dspring-boot.run.profiles=local"` to start the app
+7. Once app is running you can use http://locallhost:8081/demo/api/users to check the API
+8. Execute `mvn clean test -Dspring.profiles.active=test`
